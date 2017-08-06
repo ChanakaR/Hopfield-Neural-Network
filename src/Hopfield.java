@@ -30,7 +30,7 @@ public class Hopfield {
         int[] bipolar = new int[n];
         for (int i=0;i<n;i++){
             if(input[i] == 0){
-                bipolar[i] = -1; 
+                bipolar[i] = -1;
             }else{
                 bipolar[i] = input[i];
             }
