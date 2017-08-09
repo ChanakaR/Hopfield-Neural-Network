@@ -1,15 +1,27 @@
 /**
+ *
+ * Description :
+ *      Hopfield is one of the simplest artificial Neural Network
+ *      Network has only one layer (for input and output both)
+ *      Each neuron is connected to all other neurons.
+ *
  * Created by inocer on 8/6/17.
+ *
  */
 public class Hopfield {
 
+    // weight matrix for the network
     private int[][] weight_matrix;
+
+    // output (or input) layer size (number of neurons in it)
     private int lattice_size;
+
 
     public Hopfield(int lattice_size){
         this.lattice_size= lattice_size;
         this.weight_matrix = new int[lattice_size][lattice_size];
     }
+
 
     public void train(int[] input,int size){
         this.initialize_weights();
@@ -49,4 +61,7 @@ public class Hopfield {
         }
     }
 
+    public int[][] get_weight_matrix(){
+        return this.weight_matrix;
+    }
 }

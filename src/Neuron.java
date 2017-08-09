@@ -1,6 +1,14 @@
 /**
+ *
+ * Description :
+ *      Class to represent a Neuron
+ *      Each Neuron has a weight vector which is related to the other connected (logically) neurons
+ *
  * Created by inocer on 8/7/17.
+ *
  */
+
+
 public class Neuron {
 
     private int[] weight_vector;
@@ -10,10 +18,10 @@ public class Neuron {
         this.weight_vector = weight_vector;
     }
 
-    public int calculate_resulting_value(boolean[] input){
+    public int calculate_resulting_value(int[] input){
         int result = 0;
         for(int i=0;i<input.length;i++){
-            if(input[i]){
+            if(input[i]==1){
                 result += weight_vector[i];
             }
         }
